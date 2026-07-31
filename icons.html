@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secret Notes 💌</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="icons.css">
+
+</head>
+
+<body>
+
+<div class="notes-container">
+
+    <div class="heading">
+
+        <p>FOR MAGGU ONLY</p>
+
+        <h1>💌 Secret Notes</h1>
+
+        <h2>
+            Click the hidden icons and uncover little notes written just for you.
+            🤍
+        </h2>
+
+    </div>
+
+    <div class="icons-area">
+
+        <div class="icon icon1" onclick="openNote('cat')">🐱</div>
+
+        <div class="icon icon2" onclick="openNote('parrot')">🦜</div>
+
+        <div class="icon icon3" onclick="openNote('cloud')">☁️</div>
+
+        <div class="icon icon4" onclick="openNote('rose')">🌹</div>
+
+        <div class="icon icon5" onclick="openNote('chocolate')">🍫</div>
+
+        <div class="icon icon6" onclick="openNote('biryani')">🍛</div>
+
+        <div class="icon icon7" onclick="openNote('ribbon')">🎀</div>
+
+        <div class="icon icon8" onclick="openNote('heart')">🤍</div>
+
+        <div class="icon icon9" onclick="openNote('pillow')">😴</div>
+
+        <div class="icon icon10" onclick="openNote('sparkle')">✨</div>
+
+    </div>
+
+    <div class="hint">
+
+        <p>
+            Psst...
+            <br>
+            Not every little thing is obvious.
+            <br>
+            Look carefully. 🌸
+        </p>
+
+    </div>
+
+    <div class="next-section">
+
+        <a href="favourites.html" class="continue-btn">
+            ⭐ Continue to Favourites →
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-card">
+
+        <button class="close-btn" onclick="closeNote()">
+            ✕
+        </button>
+
+        <h2 id="popupTitle"></h2>
+
+        <p id="popupText"></p>
+
+    </div>
+
+</div>
+
+<script src="icons.js"></script>
+
+</body>
+
+</html>

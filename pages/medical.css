@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#10222b,#090909);
+
+    color:#F5F5F5;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.report{
+
+    width:100%;
+    max-width:900px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02));
+
+    border:2px solid #4FC3F7;
+
+    border-radius:28px;
+
+    padding:60px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 30px rgba(79,195,247,.18);
+
+}
+
+.header{
+
+    text-align:center;
+
+}
+
+.header p{
+
+    color:#4FC3F7;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+}
+
+.header h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:54px;
+
+    margin:15px 0;
+
+}
+
+.header h2{
+
+    font-weight:300;
+
+    color:#D8D8D8;
+
+}
+
+.divider{
+
+    width:140px;
+
+    height:2px;
+
+    background:#4FC3F7;
+
+    margin:35px auto;
+
+}
+
+.section{
+
+    margin-bottom:30px;
+
+}
+
+.section h3{
+
+    color:#4FC3F7;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.section p{
+
+    line-height:2;
+
+    color:#ECECEC;
+
+    margin-bottom:12px;
+
+}
+
+.section strong{
+
+    color:#4FC3F7;
+
+}
+
+.section ul{
+
+    padding-left:22px;
+
+    line-height:2;
+
+}
+
+.section li{
+
+    margin-bottom:8px;
+
+}
+
+.footer{
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+
+.footer a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid #4FC3F7;
+
+    padding:15px 38px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.footer a:hover{
+
+    background:#4FC3F7;
+
+    color:#111;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.report{
+
+    animation:fade .8s ease;
+
+}
+
+@media(max-width:768px){
+
+.report{
+
+padding:35px 22px;
+
+}
+
+.header h1{
+
+font-size:40px;
+
+}
+
+.header h2{
+
+font-size:18px;
+
+}
+
+.section h3{
+
+font-size:20px;
+
+}
+
+.section p,
+.section li{
+
+font-size:15px;
+
+line-height:1.9;
+
+}
+
+}

@@ -1,0 +1,1190 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:radial-gradient(circle at top,#241318,#080808);
+    color:#F8F6F3;
+}
+
+
+
+/* ==========================================
+   PAGE 1 - WELCOME
+========================================== */
+
+.welcome{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.content{
+    position:relative;
+    z-index:2;
+}
+
+.greeting{
+    font-size:14px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    opacity:0;
+    animation:appear 2s forwards;
+}
+
+.welcome h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:90px;
+    line-height:1;
+    margin:25px 0;
+    opacity:0;
+    animation:appear 2s .5s forwards;
+}
+
+.welcome h1 span{
+    display:block;
+    color:#D4AF37;
+}
+
+.creator{
+    font-size:18px;
+    opacity:0;
+    animation:appear 2s 1s forwards;
+}
+
+.creator strong{
+    color:#E8CFCB;
+}
+
+#openGift{
+    margin-top:45px;
+    padding:18px 40px;
+    border-radius:50px;
+    border:1px solid #D4AF37;
+    background:rgba(255,255,255,.08);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    backdrop-filter:blur(10px);
+    transition:.4s;
+    opacity:0;
+    animation:appear 2s 1.5s forwards;
+}
+
+#openGift:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px rgba(212,175,55,.45);
+}
+
+#openGift span{
+    margin-left:10px;
+}
+
+
+
+/* ==========================================
+   PAGE 2 - LETTER
+========================================== */
+
+.letter-page{
+
+    min-height:100vh;
+
+    padding:80px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top,#2b1820 0%,#111111 45%,#050505 100%);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.letter-card{
+
+    width:min(900px,95%);
+
+    background:rgba(18,18,18,.90);
+
+    border:1px solid rgba(212,175,55,.28);
+
+    backdrop-filter:blur(22px);
+
+    border-radius:28px;
+
+    padding:60px;
+
+    color:#F4F4F4;
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.65),
+    0 0 40px rgba(212,175,55,.08);
+
+    animation:fadeUp 1s ease;
+
+}
+
+.letter-top{
+    font-size:18px;
+    letter-spacing:2px;
+    opacity:.8;
+}
+
+.letter-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:46px;
+    color:#b58b2a;
+    margin-bottom:20px;
+}
+
+.letter-divider{
+    width:120px;
+    height:2px;
+    background:#D4AF37;
+    margin-bottom:35px;
+}
+
+.letter-title{
+    font-family:'Cormorant Garamond',serif;
+    text-align:center;
+    font-size:48px;
+    margin-bottom:35px;
+}
+
+.letter-date{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.story-heading{
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    margin:30px 0 20px;
+}
+
+.letter-card p{
+    font-size:18px;
+    line-height:2;
+    margin-bottom:15px;
+}
+
+.choose-text{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    margin-top:50px;
+}
+
+.every-time{
+    text-align:center;
+    color:#b58b2a;
+    margin:10px 0 60px;
+}
+
+.letter-ending{
+    text-align:center;
+    margin-top:30px;
+}
+
+.ending-line{
+    margin-bottom:40px;
+    font-style:italic;
+}
+
+.continue-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#D4AF37,#B58B2A);
+
+    color:#111;
+
+    font-weight:600;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    transition:.4s;
+
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+    0 0 35px rgba(212,175,55,.45);
+
+}
+
+.signature{
+    text-align:right;
+    margin-top:70px;
+    font-size:42px;
+    font-family:'Dancing Script',cursive;
+}
+
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px)
+        scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .welcome h1{
+        font-size:60px;
+    }
+
+    .creator{
+        font-size:15px;
+    }
+
+    .letter-card{
+        padding:35px 25px;
+    }
+
+    .letter-title{
+        font-size:34px;
+    }
+
+    .story-heading{
+        font-size:30px;
+    }
+
+    .choose-text{
+        font-size:42px;
+    }
+
+    .letter-card p{
+        font-size:16px;
+        line-height:1.9;
+    }
+
+    .signature{
+        font-size:34px;
+    }
+
+}
+.letter-card{
+
+    transition:.4s;
+
+}
+
+.letter-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.75),
+    0 0 55px rgba(212,175,55,.12);
+
+}
+.gold-glow{
+
+    position:fixed;
+
+    width:550px;
+
+    height:550px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.06);
+
+    filter:blur(120px);
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:-1;
+
+}
+/* ==========================================
+   PAGE 3 - 12 MONTHS
+========================================== */
+
+.months-page{
+
+    min-height:100vh;
+
+    padding:90px 20px 120px;
+
+}
+
+.months-heading{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.months-heading p{
+
+    color:#D4AF37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+.months-heading h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    margin:15px 0;
+
+    color:#ffffff;
+
+}
+
+.months-heading h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#D4AF37;
+
+    font-weight:500;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:3px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        #D4AF37,
+        transparent
+    );
+
+}
+
+.month-card{
+
+    width:44%;
+
+    padding:28px;
+
+    margin-bottom:70px;
+
+    background:rgba(18,18,18,.92);
+
+    border:1px solid rgba(212,175,55,.22);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    position:relative;
+
+    transition:.4s;
+
+}
+
+.month-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+}
+
+.month-card:nth-child(odd){
+
+    margin-right:auto;
+
+}
+
+.month-card:nth-child(even){
+
+    margin-left:auto;
+
+}
+
+.month-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:40px;
+
+    width:18px;
+
+    height:18px;
+
+    background:#D4AF37;
+
+    border-radius:50%;
+
+}
+
+.month-card:nth-child(odd)::after{
+
+    right:-47px;
+
+}
+
+.month-card:nth-child(even)::after{
+
+    left:-47px;
+
+}
+
+.month-card span{
+
+    color:#D4AF37;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.month-card h3{
+
+    margin:15px 0;
+
+    font-size:32px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:white;
+
+}
+
+.month-card p{
+
+    line-height:1.9;
+
+    color:#DDDDDD;
+
+    font-size:16px;
+
+}
+
+.final-card{
+
+    border:1px solid #D4AF37;
+
+    box-shadow:0 0 35px rgba(212,175,55,.18);
+
+}
+
+.next-section{
+
+    text-align:center;
+
+    margin-top:80px;
+
+}
+
+@media(max-width:768px){
+
+.timeline::before{
+
+left:12px;
+
+}
+
+.month-card{
+
+width:100%;
+
+margin-left:30px !important;
+
+margin-right:0 !important;
+
+}
+
+.month-card::after{
+
+left:-28px !important;
+
+right:auto !important;
+
+}
+
+.months-heading h1{
+
+font-size:52px;
+
+}
+
+.months-heading h2{
+
+font-size:24px;
+
+}
+
+.month-card h3{
+
+font-size:26px;
+
+}
+
+}
+.hidden-month{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .9s ease;
+
+}
+
+.show-month{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* ==========================================
+   PAGE 4 - QUALITIES
+========================================== */
+
+.qualities-page{
+
+    min-height:100vh;
+
+    padding:90px 20px 120px;
+
+}
+
+.qualities-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.qualities-heading p{
+
+    color:#D4AF37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+.qualities-heading h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:68px;
+
+    color:#FFFFFF;
+
+    margin:18px 0;
+
+}
+
+.qualities-heading h2{
+
+    max-width:720px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#D8D8D8;
+
+    font-size:20px;
+
+    font-weight:300;
+
+}
+
+.qualities-grid{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.quality-card{
+
+    background:rgba(18,18,18,.92);
+
+    border:1px solid rgba(212,175,55,.22);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.quality-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 45px rgba(212,175,55,.18);
+
+}
+
+.quality-card h3{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.quality-card p{
+
+    color:#E5E5E5;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+.next-section{
+
+    text-align:center;
+
+    margin-top:90px;
+
+}
+
+@media(max-width:768px){
+
+    .qualities-heading h1{
+
+        font-size:48px;
+
+    }
+
+    .qualities-heading h2{
+
+        font-size:17px;
+
+        line-height:1.8;
+
+    }
+
+    .qualities-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quality-card{
+
+        padding:28px;
+
+    }
+
+}
+/* Quality card animation */
+
+.hidden-quality{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+
+.show-quality{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#201315,#090909);
+
+    color:#F8F8F8;
+
+    overflow-x:hidden;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+
+
+/* ========================= */
+/* SAFA TIMEZ */
+/* ========================= */
+
+.timez-page{
+
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 25px;
+
+}
+
+
+
+.timez-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.timez-header p{
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#D4AF37;
+
+    font-size:13px;
+
+}
+
+
+
+.timez-header h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:75px;
+
+    margin:18px 0;
+
+    color:#ffffff;
+
+}
+
+
+
+.timez-header h2{
+
+    font-weight:300;
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+
+/* ========================= */
+/* Newspaper Grid */
+/* ========================= */
+
+.newspaper{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+
+}
+
+
+
+/* ========================= */
+/* Card */
+/* ========================= */
+
+.headline-card{
+
+    display:block;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02));
+
+    border:1px solid
+    rgba(212,175,55,.25);
+
+    backdrop-filter:blur(10px);
+
+    transition:.45s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.headline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:5px;
+    height:100%;
+
+    background:#D4AF37;
+
+}
+
+
+
+.headline-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.45),
+
+    0 0 30px rgba(212,175,55,.18);
+
+}
+
+
+
+/* ========================= */
+/* Category */
+/* ========================= */
+
+.category{
+
+    display:inline-block;
+
+    color:#D4AF37;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* ========================= */
+/* Heading */
+/* ========================= */
+
+.headline-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* ========================= */
+/* Description */
+/* ========================= */
+
+.headline-card p{
+
+    color:#d8d8d8;
+
+    line-height:1.9;
+
+    font-size:15px;
+
+}
+
+
+
+/* ========================= */
+/* Read More */
+/* ========================= */
+
+.read-more{
+
+    display:inline-block;
+
+    margin-top:28px;
+
+    color:#D4AF37;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+
+
+.headline-card:hover .read-more{
+
+    transform:translateX(10px);
+
+}
+
+
+
+/* ========================= */
+/* Continue */
+/* ========================= */
+
+.next-section{
+
+    text-align:center;
+
+    margin-top:80px;
+
+}
+
+
+
+.continue-btn{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    border:1px solid #D4AF37;
+
+    color:white;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    transition:.35s;
+
+}
+
+
+
+.continue-btn:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+}
+
+
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+.timez-header h1{
+
+font-size:50px;
+
+}
+
+.timez-header h2{
+
+font-size:15px;
+
+}
+
+.headline-card{
+
+padding:25px;
+
+}
+
+.headline-card h3{
+
+font-size:28px;
+
+}
+
+}
+/* GLOBAL PAGE TRANSITION */
+
+body{
+    animation: pageFadeIn 0.8s ease forwards;
+}
+
+
+@keyframes pageFadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
